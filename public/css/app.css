@@ -1,0 +1,21 @@
+.wrapper {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+}

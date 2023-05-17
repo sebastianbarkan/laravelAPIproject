@@ -3,15 +3,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url('css/app.css') }}">
+    <title>Laravel Blog</title>
 </head>
 <body>
+    <div class="wrapper"> 
     @auth
-    <p>Congrats logged in</p>
-    <form action="/logout" method="POST">
-        @csrf
-        <button>Log Out</button>
-    </form>
+    <div class="login-wrapper">
+        <p>Congrats logged in</p>
+        <form action="/logout" method="POST" >
+            @csrf
+            <button>Log Out</button>
+        </form>
+    </div>
 
     <div>
         <h2>Create a New Post</h2>
@@ -39,18 +43,18 @@
         @endforeach
     </div>
     @else
-    <div>
+    <div class="auth-wrapper">
         <h2>Login</h2>
-        <form action="/login" method="POST">
+        <form action="/login" method="POST" class="auth-form">
             @csrf
             <input name="loginname" type="text" placeholder="name"> 
             <input name="loginpassword" type="password" placeholder="password">
             <button>Login</button>
         </form>
     </div>
-    <div>
+    <div class="auth-wrapper">
         <h2>register</h2>
-        <form action="/register" method="POST">
+        <form action="/register" method="POST" class="auth-form">
             @csrf
             <input name="name" type="text" placeholder="name">
             <input name="email" type="email" placeholder="email">
@@ -60,6 +64,6 @@
     </div>
 
     @endauth
-
+    </div>
 </body>
 </html>
