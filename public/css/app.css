@@ -19,3 +19,36 @@
     flex-direction: column;
     row-gap: 0.5rem;
 }
+
+.create-post-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+}
+
+.create-post-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+}
+
+.welcome-msg {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.all-posts-wrapper {
+    display: flex;
+    flex-direction: column;
+    column-gap: 0.5rem;
+}
+
+.post-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    border-radius: 10px;
+    background-color: aliceblue;
+    border: 2px solid black;
+    padding: 2rem;
+}

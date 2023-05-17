@@ -10,16 +10,16 @@
     <div class="wrapper"> 
     @auth
     <div class="login-wrapper">
-        <p>Congrats logged in</p>
+        <p class="welcome-msg">Nice you're logged in!</p>
         <form action="/logout" method="POST" >
             @csrf
             <button>Log Out</button>
         </form>
     </div>
 
-    <div>
+    <div class="create-post-wrapper">
         <h2>Create a New Post</h2>
-        <form action="/create-post" method="POST">
+        <form action="/create-post" method="POST" class="create-post-form">
             @csrf
             <input type="text" name="title" placeholder="post title">
             <textarea name="body" placeholder="body content..."></textarea>
@@ -27,10 +27,10 @@
         </form>
     </div>
 
-    <div>
+    <div class="all-posts-wrapper">
         <h2>All Posts</h2>
         @foreach($posts as $post)
-        <div>
+        <div class="post-wrapper">
             <h3>{{$post['title']}} by {{$post->user->name}}</h3>
             {{$post['body']}}
             <p><a href="/edit-post/{{$post->id}}">Edit</a></p>
